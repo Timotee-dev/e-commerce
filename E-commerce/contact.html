@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | NEXORA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0f1c;
+      color: #f4f4f4;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: rgba(10, 15, 28, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #007bff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      color: #ddd;
+      margin: 0 14px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    nav button {
+      background: linear-gradient(90deg, #007bff, #ff00ff);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    nav button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: #fff;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(10, 15, 28, 0.98);
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+    }
+
+    .mobile-menu a, .mobile-menu button {
+      margin: 10px 0;
+      color: #fff;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #007bff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact p {
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    form {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 500;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 16px;
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    form button {
+      background: linear-gradient(90deg, #007bff, #ff00ff);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    form button:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-links {
+      margin-top: 40px;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      color: #fff;
+    }
+
+    .email {
+      background: #ff4500;
+      color: #fff;
+    }
+
+    .contact-links a:hover {
+      opacity: 0.9;
+      transform: translateY(-3px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav.desktop-nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+     footer {
+      text-align: center;
+      padding: 30px;
+      background: #0f0f15;
+      color: #999;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">NEXORA</a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="stores.html">Stores</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">T&C</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="stores.html">Stores</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">T&C</a>
+    </div>
+  </header>
+
+<section class="contact"></section>
+    <h2>Contact Us</h2>
+    <p>Got questions, feedback, or partnership inquiries?  
+    Reach out to us through the form below or directly via WhatsApp and email.</p>
+
+    <form action="mailto:nexora1704@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-links">
+      <a href="https://wa.me/2348026475196" class="whatsapp" target="_blank">Chat on WhatsApp</a>
+      <a href="mailto:nexora1704@gmail.com" class="email">Send us an Email</a>
+    </div>
+  </section>
+
+   <footer>
+     © 2025 NEXORA. All rights reserved.
+     </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function login() {
+      alert("Login functionality coming soon!");
+    }
+
+    function sendMessage(event) {
+      event.preventDefault();
+      alert("Thank you! Your message has been sent successfully.");
+      document.querySelector("form").reset();
+    }
+  </script>
+</body>
+</html>

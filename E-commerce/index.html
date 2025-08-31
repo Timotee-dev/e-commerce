@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXORA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0f;
+      color: #fff;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      backdrop-filter: blur(12px);
+      background: rgba(10, 10, 15, 0.75);
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #00f2fe, #f77062);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .desktop-nav a, .desktop-nav button {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .desktop-nav a:hover, .desktop-nav button:hover {
+      color: #00f2fe;
+      text-shadow: 0 0 8px #00f2fe;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 5px;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 65px;
+      right: 0;
+      background: rgba(10, 10, 15, 0.95);
+      width: 220px;
+      padding: 15px;
+      border-radius: 0 0 10px 10px;
+      z-index: 999;
+    }
+    .mobile-menu a, .mobile-menu button {
+      margin: 10px 0;
+      color: #fff;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .mobile-menu a:hover, .mobile-menu button:hover {
+      color: #f77062;
+      text-shadow: 0 0 6px #f77062;
+    }
+    .mobile-menu.active {
+      display: flex;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #00f2fe, #f77062);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+    .hero button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      background: linear-gradient(45deg, #00f2fe, #f77062);
+      color: white;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      box-shadow: 0 0 15px #00f2fe;
+      transform: scale(1.05);
+    }
+
+    /* Categories & Featured */
+    section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #111;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      box-shadow: 0 0 15px #f77062;
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0f0f15;
+      color: #999;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+    @media (min-width: 769px) {
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">NEXORA</a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="stores.html">Stores</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">T&C</a>
+      <button onclick="login()">Login</button>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="stores.html">Stores</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">T&C</a>
+      <button onclick="login()">Login</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Buy & Sell Anything on Campus 🚀</h1>
+    <p>Your one-stop student marketplace.</p>
+    <a href="browse.html"> <button>Start Browsing</button></a>
+  </section>
+
+  <section>
+    <h2>Categories</h2>
+    <div class="grid">
+      <div class="card">📚 Books</div>
+      <div class="card">💻 Electronics</div>
+      <div class="card">👕 Fashion</div>
+      <div class="card">🏠 Hostel Items</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Items</h2>
+    <div class="grid">
+      <div class="card">Laptop - $300</div>
+      <div class="card">Sneakers - $40</div>
+      <div class="card">Textbooks - $20</div>
+      <div class="card">Guitar - $80</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 NEXORA. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+    function login() {
+      alert("Login button clicked!");
+    }
+    function browse() {
+      alert("Browse button clicked!");
+    }
+  </script>
+</body>
+</html>

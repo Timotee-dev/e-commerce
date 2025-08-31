@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | NEXORA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0f1c;
+      color: #f4f4f4;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: rgba(10, 15, 28, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #007bff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      color: #ddd;
+      margin: 0 14px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    nav button {
+      background: linear-gradient(90deg, #007bff, #ff00ff);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    nav button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: #fff;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(10, 15, 28, 0.98);
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+    }
+
+    .mobile-menu a, .mobile-menu button {
+      margin: 10px 0;
+      color: #fff;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    /* Terms Section */
+    .terms {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+    }
+
+    .terms h1 {
+      font-size: 38px;
+      text-align: center;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #007bff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .terms h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      color: #00aaff;
+    }
+
+    .terms p {
+      font-size: 16px;
+      color: #ddd;
+      margin: 12px 0;
+    }
+
+    .terms ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .terms ul li {
+      margin: 8px 0;
+      color: #ccc;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav.desktop-nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+     footer {
+      text-align: center;
+      padding: 30px;
+      background: #0f0f15;
+      color: #999;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">NEXORA</a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="stores.html">Stores</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">T&C</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="stores.html">Stores</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">T&C</a>
+    </div>
+  </header>
+
+  <section class="terms">
+    <h1>Terms & Conditions</h1>
+    <p>Welcome to NEXORA. By using our platform, you agree to the following terms and conditions. Please read them carefully before using our services.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using NEXORA, you agree to comply with these terms. If you do not agree, please do not use our platform.</p>
+
+    <h2>2. Use of Our Platform</h2>
+    <ul>
+      <li>You must be at least 16 years old to use NEXORA.</li>
+      <li>You agree not to use the platform for illegal or harmful purposes.</li>
+      <li>You are responsible for maintaining the confidentiality of your account.</li>
+    </ul>
+
+    <h2>3. Content Ownership</h2>
+    <p>All content uploaded to NEXORA remains the property of its creator. However, by uploading, you grant NEXORA a license to display and share your content on our platform.</p>
+
+    <h2>4. Payments & Subscriptions</h2>
+    <p>Some services on NEXORA may require payments or subscriptions. By subscribing, you agree to provide accurate payment information and comply with our billing policies.</p>
+
+    <h2>5. Limitation of Liability</h2>
+    <p>NEXORA is not responsible for damages resulting from misuse of the platform, technical issues, or third-party interactions.</p>
+
+    <h2>6. Modifications</h2>
+    <p>We reserve the right to update or change these terms at any time. Continued use of our platform constitutes acceptance of the updated terms.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions about these terms, please <a href="contact.html" style="color:#00aaff;">contact us</a>.</p>
+  </section>
+
+   <footer>
+     © 2025 NEXORA. All rights reserved.
+     </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function login() {
+      alert("Login functionality coming soon!");
+    }
+  </script>
+</body>
+</html>
